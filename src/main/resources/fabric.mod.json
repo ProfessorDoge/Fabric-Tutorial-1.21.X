@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "tutorialmod",
+	"version": "${version}",
+	"name": "Tutorial Mod",
+	"description": "Tutorial by Kaupenjoe, followed by ProfessorDoge",
+	"authors": [
+		"ProfessorDoge",
+		"Kaupenjoe"
+	],
+	"contact": {
+		"discord": "professordoge",
+		"email": "professordoge0487@gmail.com",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/tutorialmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.profdoge.tutorialmod.TutorialMod"
+		],
+		"fabric-datagen": [
+			"net.profdoge.tutorialmod.TutorialModDataGenerator"
+		],
+		"client": [
+			"net.profdoge.tutorialmod.TutorialModClient"
+		]
+	},
+	"mixins": [
+		"tutorialmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.13",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
