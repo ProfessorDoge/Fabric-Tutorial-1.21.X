@@ -1,3 +1,6 @@
 {
-  "item.tutorialmod.emerald_refined" : "Refined Emerald"
+  "item.tutorialmod.emerald_refined" : "Refined Emerald",
+  "item.tutorialmod.emerald_refined_helmet" : "Refined Emerald Helmet",
+
+  "item.tutorialmod.emerald_refined_block": "Block of Refined Emerald"
 }
