@@ -12,11 +12,19 @@ import net.profdoge.tutorialmod.TutorialMod;
 
 public class ModItems {
 
-    public static final Item EMERALD_REFINED = registerItem("emerald_refined",new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID,"emerald_refined")))));
-    public static final Item EMERALD_REFINED_HELMET = registerItem("emerald_refined_helmet",new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID,"emerald_refined_helmet")))));
+    public static final Item EMERALD_REFINED = registerItem("emerald_refined", new Item.Settings());
+    public static final Item EMERALD_REFINED_HELMET = registerItem("emerald_refined_helmet", new Item.Settings());
+    public static final Item EMERALD_REFINED_SWORD = registerItem("emerald_refined_sword", new Item.Settings());
+    public static final Item EMERALD_REFINED_PICKAXE = registerItem("emerald_refined_pickaxe", new Item.Settings());
+    public static final Item EMERALD_REFINED_AXE = registerItem("emerald_refined_axe", new Item.Settings());
+    public static final Item EMERALD_REFINED_SHOVEL = registerItem("emerald_refined_shovel", new Item.Settings());
+    public static final Item EMERALD_REFINED_HOE = registerItem("emerald_refined_hoe", new Item.Settings());
 
-    private static Item registerItem(String name, Item item) {
-        return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, name), item);
+
+    private static Item registerItem(String name, Item.Settings itemSettings) {
+        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, name));
+        Item item = new Item(itemSettings.registryKey(key));
+        return Registry.register(Registries.ITEM, key, item);
     }
 
     public static void registerModItems() {
@@ -24,7 +32,19 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries -> {
             fabricItemGroupEntries.add(EMERALD_REFINED);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(fabricItemGroupEntries -> {
+            fabricItemGroupEntries.add(EMERALD_REFINED_SWORD);
+            fabricItemGroupEntries.add(EMERALD_REFINED_AXE);
             fabricItemGroupEntries.add(EMERALD_REFINED_HELMET);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(fabricItemGroupEntries -> {
+            fabricItemGroupEntries.add(EMERALD_REFINED_SHOVEL);
+            fabricItemGroupEntries.add(EMERALD_REFINED_PICKAXE);
+            fabricItemGroupEntries.add(EMERALD_REFINED_AXE);
+            fabricItemGroupEntries.add(EMERALD_REFINED_HOE);
         });
     }
 }
