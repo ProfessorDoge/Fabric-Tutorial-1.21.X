@@ -2,5 +2,11 @@
   "item.tutorialmod.emerald_refined" : "Refined Emerald",
   "item.tutorialmod.emerald_refined_helmet" : "Refined Emerald Helmet",
 
-  "item.tutorialmod.emerald_refined_block": "Block of Refined Emerald"
+  "item.tutorialmod.emerald_refined_block": "Block of Refined Emerald",
+
+  "item.tutorialmod.emerald_refined_sword": "Refined Emerald Sword",
+  "item.tutorialmod.emerald_refined_pickaxe": "Refined Emerald Pickaxe",
+  "item.tutorialmod.emerald_refined_axe": "Refined Emerald Axe",
+  "item.tutorialmod.emerald_refined_shovel": "Refined Emerald Shovel",
+  "item.tutorialmod.emerald_refined_hoe": "Refined Emerald Hoe"
 }
